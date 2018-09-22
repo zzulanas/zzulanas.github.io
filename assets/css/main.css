@@ -112,6 +112,14 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+	.graph-parent {
+		position: relative;
+	}
+	.graph-child {
+		position: sticky;
+		bottom: 0;
+	}
+
 /* Type */
 
 	body, input, select, textarea {

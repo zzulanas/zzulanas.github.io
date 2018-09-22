@@ -18,8 +18,8 @@
 						<li><a href="../index.html">Home</a></li>
 						<li><a href="/pages/intel.html" class="active">Intel</a></li>
 						<li><a href="/pages/orhx.html">ORHX</a></li>
-						<li><a href="/pages/intel.html">Vission</a></li>
-						<li><a href="/pages/orhx.html">PXL</a></li>
+						<li><a href="/pages/vission.html">Vission</a></li>
+						<li><a href="/pages/pxl.html">PXL</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -31,13 +31,17 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Experience at Intel</h1>
-							<span class="image fit"><img src="/images/pic04.jpg" alt="" /></span>
+							<span class="image fit"><img src="/images/Snapchat-89001307.jpg" alt="" />
+							<i>All of my other intern friends at Intel</i></span>
 							<p>Over the past two summers (2017 and 2018), I was fortunate enough to have internships under the NSG (Non-volatile memory Solutions Group) division of Intel. During my first internship,
 								I was tasked with enhancing an existing graphical module to display testing timelines for SSDs. The graph was built with D3.js and AngularJS for the front end, and Flask/SQLAlchemy for
 								the end points and back end. The enhancement I added to the graph was the ability for product owners to set deadlines and accurate timelines for when they wanted tests run and 
 								executed throughout the year.
 							</p>
-							<canvas id="myChart" width="100" height="100" class="image right"></canvas>
+								<div class ="image right">
+									<canvas id="milestonesChart" width="300" height="300"></canvas>
+									<span><i>Example of what the graph looked like</i></span>
+								</div>
 							<p>
 								In this internship I was exposed to web development for the first time, and was able to deliver a product that is still in use today. The ability of displaying more accurate deadlines for
 								SSD testing timelines has saved hundreds of hours of confusion between product owners and employees running the tests. Working with a small team allowed me to ask others for help while still
@@ -60,32 +64,31 @@
 
 		<!-- Scripts -->
 		<script>
-			var ctx = document.getElementById("myChart").getContext('2d');
-			var myChart = new Chart(ctx, {
+			var ctx = document.getElementById("milestonesChart").getContext('2d');
+			var milestonesChart = new Chart(ctx, {
 				type: 'bar',
 				data: {
-					labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+					labels: ["WW00", "WW04","WW08","WW12"],
 					datasets: [{
-						label: '# of Votes',
-						data: [12, 19, 3, 5, 2, 3],
-						backgroundColor: [
+						label: 'Actual tests completed',
+						data: [3, 6, 7, 10],
+						backgroundColor: 
 							'rgba(255, 99, 132, 0.2)',
-							'rgba(54, 162, 235, 0.2)',
-							'rgba(255, 206, 86, 0.2)',
-							'rgba(75, 192, 192, 0.2)',
-							'rgba(153, 102, 255, 0.2)',
-							'rgba(255, 159, 64, 0.2)'
-						],
-						borderColor: [
-							'rgba(255,99,132,1)',
-							'rgba(54, 162, 235, 1)',
-							'rgba(255, 206, 86, 1)',
-							'rgba(75, 192, 192, 1)',
-							'rgba(153, 102, 255, 1)',
-							'rgba(255, 159, 64, 1)'
-						],
+						borderColor: 
+							'rgba(255,99,132,1)'
+						,
 						borderWidth: 1
-					}]
+					},
+						{label: 'Expected completion',
+						data: [2, 4, 8, 16],
+						backgroundColor: 
+							'rgb(121, 171, 252)',
+						borderColor: 
+							'rgb(56, 132, 255)'
+						,
+						borderWidth: 1,
+						type: 'line',
+						lineTension: 0}]
 				},
 				options: {
 					scales: {
@@ -97,7 +100,7 @@
 					}
 				}
 			});
-			ctx.style.backgroundColor = 'rgba(255,0,0,255)';
+			document.getElementById("milestonesChart").style.background = 'white';
 			</script>
 			<script src="/assets/js/jquery.min.js"></script>
 			<script src="/assets/js/jquery.scrollex.min.js"></script>
