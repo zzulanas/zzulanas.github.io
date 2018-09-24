@@ -127,31 +127,9 @@
 				<!-- Four -->
 					<section id="four" class="wrapper style1 fade-up">
 						<div class="inner">
-							<h2>Send me a message!</h2>
-							<p>If you want to get in contact, email is the best way to reach me. Send me a message and I'll get back to you as soon as possible!</p>
-							<div class="split style1">
 								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
+									<h2>Contact info</h2>
+									<p>The best way to contact me is either through text or email, but feel free to contact me through social media as well.</p>
 									<ul class="contact">
 										<li>
 											<h3>Email</h3>
@@ -187,6 +165,70 @@
 			<script src="assets/js/main.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 			<script src="assets/js/lightbox.js"></script>
+			<script>
+				$(function()
+				{
+					function after_form_submitted(data)
+					{
+						if(data.result == 'success')
+						{
+							$('form#reused_form').hide();
+							$('#success_message').show();
+							$('#error_message').hide();
+						}
+						else
+						{
+							$('#error_message').append('<ul></ul>');
+				
+							jQuery.each(data.errors,function(key,val)
+							{
+								$('#error_message ul').append('<li>'+key+':'+val+'</li>');
+							});
+							$('#success_message').hide();
+							$('#error_message').show();
+				
+							//reverse the response on the button
+							$('button[type="button"]', $form).each(function()
+							{
+								$btn = $(this);
+								label = $btn.prop('orig_label');
+								if(label)
+								{
+									$btn.prop('type','submit' );
+									$btn.text(label);
+									$btn.prop('orig_label','');
+								}
+							});
+				
+						}//else
+					}
+				
+					$('#reused_form').submit(function(e)
+						{
+						e.preventDefault();
+				
+						$form = $(this);
+						//show some response on the button
+						$('button[type="submit"]', $form).each(function()
+						{
+							$btn = $(this);
+							$btn.prop('type','button' );
+							$btn.prop('orig_label',$btn.text());
+							$btn.text('Sending ...');
+						});
+				
+				
+									$.ajax({
+								type: "POST",
+								url: 'handler.php',
+								data: $form.serialize(),
+								success: after_form_submitted,
+								dataType: 'json'
+							});
+				
+						});
+				});
+				</script>
 
 	</body>
 </html>
