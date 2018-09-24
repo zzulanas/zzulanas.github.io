@@ -34,7 +34,7 @@
 							<span class="image left"><img src="/images/pxl.png" alt="Vission.io" />
 							</span>
 							<p>
-								PXL is a project a group of friends and I made for the Outside Hacks hackathon in 2018. The idea behind PXL was to make a display in a a music festival using phones.
+								<a href="https://github.com/LasseNordahl/PXL">PXL</a> is a project a group of friends and I made for the Outside Hacks hackathon in 2018. The idea behind PXL was to make a display in a a music festival using phones.
 								Everyone in the crowd would use their phones as a "pixel" in the larger display of an image chosen either by the artist or the crowd.
 							</p>
 								
@@ -101,7 +101,12 @@
 			<script src="/assets/js/main.js"></script>
 			<script>
 				function emergencyDisp() {
-					$('.box.emergen').toggleClass('emergenanimate')
+					$('.box.emergenanimate').addClass('emergen')
+					$('.box.emergenanimate').removeClass('emergenanimate')
+					$('.box.emergen').removeClass('emergenanimate')
+					$('.box.emergen').addClass('emergenanimate')
+					$('.box.emergen').removeAttr('style')
+					$('.box.emergen').toggleClass('emergen')
 				}
 			</script>
 

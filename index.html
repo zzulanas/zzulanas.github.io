@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -62,18 +63,6 @@
 					
 					<section id="two" class="wrapper style2 spotlights">
 							<section>
-								<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
-								<div class="content">
-									<div class="inner">
-										<h2>Sed ipsum dolor</h2>
-										<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-										<ul class="actions">
-											<li><a href="/pages/generic.html" class="button">Learn more</a></li>
-										</ul>
-									</div>
-								</div>
-							</section>
-							<section>
 								<a href="/pages/pxl.html" class="image"><img src="images/PXL.png" alt="" data-position="top center" /></a>
 								<div class="content">
 									<div class="inner">
@@ -98,9 +87,14 @@
 								</div>
 							</section>
 						</section>
-
 				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
+				<section id="three" class="wrapper style4 fade-up">
+					<div class="inner">
+						
+					</div>
+				</section>
+				<!-- Four -->
+					<section id="four" class="wrapper style1 fade-up">
 						<div class="inner">
 							<h2>Send me a message!</h2>
 							<p>If you want to get in contact, email is the best way to reach me. Send me a message and I'll get back to you as soon as possible!</p>
@@ -161,6 +155,13 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+			<script>
+			$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+			});
+			</script>
 
 	</body>
 </html>
