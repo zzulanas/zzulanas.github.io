@@ -59,7 +59,8 @@ table {
 	background-color: #1E1E1E;
 	animation-name: color-change;
 	animation-duration: 5s;
-	animation-iteration-count: 1;
+	animation-iteration-count: 2;
+	animation-delay: 500ms;
 }
 
 .box.emergen {
@@ -67,6 +68,11 @@ table {
 	animation-name: color-change;
 	animation-duration: 5s;
 	animation-iteration-count: 1;
+}
+
+.img-light{
+	width:50%;
+	display: inline-block;
 }
 
 
