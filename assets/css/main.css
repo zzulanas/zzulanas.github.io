@@ -50,6 +50,45 @@ table {
 	border-spacing: 0;
 }
 
+.box {
+	float: left;
+	width: 20px;
+	height: 20px;
+	padding-bottom: 30%;
+	margin:5%;
+	background-color: #1E1E1E;
+	animation-name: color-change;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+}
+
+.box.emergen {
+	background-color: #1E1E1E;
+	animation-name: color-change;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+}
+
+
+@keyframes color-change {
+	0% {background-color: #1E1E1E;}
+	33% {background-color:  rgb(194, 52, 52);}
+	66% {background-color:    rgb(72, 44, 196);}
+	100% {background-color:  #1E1E1E;}
+}
+
+.emergenanimate{
+	animation-name: emergen-change;
+	animation-duration: 2s;
+	animation-iteration-count: 3;
+}
+
+@keyframes emergen-change {
+	0% {background-color: #1E1E1E;}
+	50% {background-color:  rgb(194, 52, 52);}
+	100% {background-color:  #1E1E1E;}
+}
+
 body {
 	-webkit-text-size-adjust: none;
 }

@@ -1,29 +1,25 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Generic - Hyperspace by HTML5 UP</title>
+		<title>Zach Zulanas</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">Zach Zulanas</a>
+				<a href="../index.html" class="title">Zach Zulanas</a>
 				<nav>
 					<ul>
 						<li><a href="../index.html">Home</a></li>
-						<li><a href="/pages/intel.html" class="active">Intel</a></li>
+						<li><a href="/pages/intel.html">Intel</a></li>
 						<li><a href="/pages/orhx.html">ORHX</a></li>
-						<li><a href="/pages/intel.html">Vission</a></li>
-						<li><a href="/pages/orhx.html">PXL</a></li>
+						<li><a href="/pages/vission.html">Vission</a></li>
+						<li><a href="/pages/pxl.html"  class="active">PXL</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -34,23 +30,66 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
-							<span class="image fit"><img src="/images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h1 class="major">Vission.io</h1>
+							<span class="image left"><img src="/images/pxl.png" alt="Vission.io" />
+							</span>
+							<p>
+								PXL is a project a group of friends and I made for the Outside Hacks hackathon in 2018. The idea behind PXL was to make a display in a a music festival using phones.
+								Everyone in the crowd would use their phones as a "pixel" in the larger display of an image chosen either by the artist or the crowd.
+							</p>
+								
+							<div class="image right" style="display: inline-block; text-align: center; font: 0.8em sans-serif;">
+								<div class="box" style="animation-delay: 0ms"></div>
+								<div class="box" style="animation-delay: 300ms"></div>
+								<div class="box emergen" style="animation-delay: 600ms"></div>
+								<div class="box emergen" style="animation-delay: 900ms"></div>
+								<div class="box emergen" style="animation-delay: 1200ms"></div>
+								
+								<div class="box" style="animation-delay: 300ms"></div>
+								<div class="box" style="animation-delay: 600ms"></div>
+								<div class="box emergen" style="animation-delay: 900ms"></div>
+								<div class="box emergen" style="animation-delay: 1200ms"></div>
+								<div class="box emergen" style="animation-delay: 1500ms"></div>
+
+								<div class="box" style="animation-delay: 600ms"></div>
+								<div class="box" style="animation-delay: 900ms"></div>
+								<div class="box emergen" style="animation-delay: 1200ms"></div>
+								<div class="box emergen" style="animation-delay: 1500ms"></div>
+								<div class="box emergen" style="animation-delay: 1800ms"></div>
+
+								<div class="box" style="animation-delay: 900ms"></div>
+								<div class="box" style="animation-delay: 1200ms"></div>
+								<div class="box" style="animation-delay: 1500ms"></div>
+								<div class="box" style="animation-delay: 1800ms"></div>
+								<div class="box" style="animation-delay: 2100ms"></div>
+
+								<div class="box" style="animation-delay: 1200ms"></div>
+								<div class="box" style="animation-delay: 1500ms"></div>
+								<div class="box" style="animation-delay: 1800ms"></div>
+								<div class="box" style="animation-delay: 2100ms"></div>
+								<div class="box" style="animation-delay: 2400ms"></div>
+								
+								<span></span><i>Example of what the phone grid would look like from above</i></span>
+							</div>
+							<p>
+								Granted, we anticipated the grids would not be as nice as the one to the right, but the general concept is to make a pixel grid out of people, and have the artist choose
+								an image or pattern, and the audience would be shown their image from above on a screen on stage.
+							</p>
+							<p>
+								Each user would choose an event and region they're in, and would be put in a grid section, where their phone would display a certain color based off of hex values provided by
+								an image. Later into the hackathon, we thought of another use of the app, where people in an emergency situation would be able to signal for help. When a user signals for help
+								on the website, the grid will look like so <a onclick="emergencyDisp()">(click here)</a>. The user who signalled for help would be highlighted in red while everyone else's displays are black. This way 
+								any user who is in trouble can get help as soon as possible in a large crowd.
+							</p>
+							<p>
+								We built the project using ReactJS and Firebase, making a minimal web app usable on any mobile platform.
+							</p>
 						</div>
 					</section>
 
 			</div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+
 
 		<!-- Scripts -->
 			<script src="/assets/js/jquery.min.js"></script>
@@ -60,6 +99,12 @@
 			<script src="/assets/js/breakpoints.min.js"></script>
 			<script src="/assets/js/util.js"></script>
 			<script src="/assets/js/main.js"></script>
+			<script>
+				function emergencyDisp() {
+					$('.box.emergen').toggleClass('emergenanimate')
+				}
+			</script>
+
 
 	</body>
 </html>
