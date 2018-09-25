@@ -89,7 +89,7 @@ table {
   }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 100px) {
+  @media screen and (max-width: 600px) {
 	.img-column {
 	  flex: 50%;
 	  max-width: 50%;
@@ -97,7 +97,7 @@ table {
   }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width:400px) {
+  @media screen and (max-width: 800px) {
 	.img-column {
 	  flex: 100%;
 	  max-width: 100%;
