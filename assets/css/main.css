@@ -24,6 +24,10 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+* {
+	box-sizing: border-box;
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -59,16 +63,29 @@ table {
 	background-color: #1E1E1E;
 	animation-name: color-change;
 	animation-duration: 5s;
-	animation-iteration-count: 2;
+	animation-iteration-count: 3;
 	animation-delay: 500ms;
+}
+
+.box-row{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+
 }
 
 .box.emergen {
 	background-color: #1E1E1E;
 	animation-name: color-change;
 	animation-duration: 5s;
+<<<<<<< HEAD
+	animation-iteration-count: 3;
+=======
 	animation-iteration-count: 2;
+>>>>>>> d305371201c84c46701f5b93fe4f19c8a116a43d
 }
+
 
 .img-row {
 	display: flex;
